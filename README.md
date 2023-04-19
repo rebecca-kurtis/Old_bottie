@@ -1,0 +1,1 @@
+Client folder is the react/client side. Api is the database/api stuff.
