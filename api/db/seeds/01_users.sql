@@ -1,2 +1,2 @@
 INSERT INTO users (first_name, last_name, email, password, phone, address, city, state, country, postal_code)
-VALUES ('John', 'Doe', 'johndoe@example.com', 'password123', 5555555555, "1234 Nice Road Street",'Calgary', "AB", "Canada", "T0T 0T0");
+VALUES ('John', 'Doe', 'johndoe@example.com', 'password123', '555-555-5555', '1234 Nice Road Street','Calgary', 'AB', 'Canada', 'T0T 0T0');
