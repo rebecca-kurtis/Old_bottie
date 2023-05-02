@@ -1,0 +1,70 @@
+li {
+  list-style-type: none;
+}
+
+.card {
+  position: relative;
+  width: 345px;
+  height: 191px;
+  left: 559px;
+  top: 595px;
+  background: #FFFFFF;
+  box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+}
+
+.card__name {
+  position: absolute;
+  left: 54.62%;
+  right: 17.68%;
+  top: 5%;
+  bottom: 95%;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  width: 42%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.15px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.card__description {
+  position: absolute;
+  left: 54.35%;
+  right: 3.43%;
+  top: 25%;
+  bottom: 85%;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.25px;
+  color: rgba(20, 19, 19, 0.6);
+}
+
+.card__price {
+  position: absolute;
+  left: 54.62%;
+  right: 17.68%;
+  top: 72%;
+  bottom: 28%;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.15px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.card__image {
+  position: absolute;
+  bottom: 0%;
+  width: 232px;
+  height: 232x;
+  left: -8%;
+}/*# sourceMappingURL=ProductCard.css.map */

@@ -1,0 +1,23 @@
+h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 58px;
+}
+
+.hero-banner {
+  height: 427px;
+  left: 0px;
+  top: 0px;
+  background: #FFF4E8;
+}
+
+.text-banner {
+  display: flex;
+  justify-content: center;
+  height: 127px;
+  padding-top: 212px;
+  text-align: center;
+  letter-spacing: 0.15px;
+}/*# sourceMappingURL=HeroBanner.css.map */

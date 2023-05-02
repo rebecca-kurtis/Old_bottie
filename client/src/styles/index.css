@@ -1,0 +1,44 @@
+@import "~normalize.css/normalize.css";
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900");
+h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 58px;
+}
+
+h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 65px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+@media only screen and (max-width: 960px) {
+  html {
+    font-size: 12px;
+  }
+  .layout {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 320px) {
+  html {
+    font-size: 10px;
+  }
+}/*# sourceMappingURL=index.css.map */
