@@ -1,9 +1,0 @@
--- DROP and CREATE orders TABLE
-DROP TABLE IF EXISTS carts CASCADE;
-
-CREATE TABLE carts (
-id SERIAL PRIMARY KEY NOT NULL,
-CONSTRAINT fk_order FOREIGN KEY(id) REFERENCES orders(id),
-total INT,
-modified_date TIMESTAMP
-);

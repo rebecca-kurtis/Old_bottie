@@ -2,8 +2,9 @@
 DROP TABLE IF EXISTS chat_gpt CASCADE;
 
 CREATE TABLE chat_gpt (
-id SERIAL PRIMARY KEY NOT NULL,
-CONSTRAINT fk_card_design FOREIGN KEY(id) REFERENCES card_design(id),
+chat_gpt_id SERIAL PRIMARY KEY NOT NULL,
+card_design_id INT,
+FOREIGN KEY(card_design_id) REFERENCES card_designs,
 Occasion VARCHAR(255),
 modified_date TIMESTAMP,
 mood VARCHAR(255),

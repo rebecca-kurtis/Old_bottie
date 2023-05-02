@@ -3,6 +3,8 @@ DROP TABLE IF EXISTS product_to_category CASCADE;
 
 CREATE TABLE product_to_category (
 id SERIAL PRIMARY KEY NOT NULL,
-CONSTRAINT fk_category FOREIGN KEY(id) REFERENCES categories(id),
-CONSTRAINT fk_product FOREIGN KEY(id) REFERENCES products(id)
+category_id INT,
+product_id INT,
+FOREIGN KEY(category_id) REFERENCES categories,
+FOREIGN KEY(product_id) REFERENCES products
 );
