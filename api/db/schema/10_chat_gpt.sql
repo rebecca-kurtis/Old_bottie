@@ -10,6 +10,5 @@ modified_date TIMESTAMP DEFAULT NOW(),
 mood VARCHAR(255),
 final_prompt TEXT,
 prose_style VARCHAR(255),
-style VARCHAR(255),
 word_length INT
 );
