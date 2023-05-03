@@ -7,14 +7,10 @@ h3 {
 }
 
 .page-title {
-  position: absolute;
-  width: 318px;
-  height: 65px;
-  left: 559px;
-  top: 459px;
-  /* identical to box height, or 203% */
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  height: 65px;
   text-align: center;
   letter-spacing: 0.15px;
   color: #000000;

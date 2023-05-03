@@ -12,7 +12,7 @@ export default function ProductGrid(props) {
       key={data.id} 
       name={data.name} 
       description={data.description} 
-      price={data.price}
+      price={data.price_in_cents}
       imageSrc={data.image_draw}
     /> 
   });

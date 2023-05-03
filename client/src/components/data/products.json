@@ -16,14 +16,14 @@
     "sun": "Bright",
     "sun_description": "Sunlight is the most important environmental factor controlling the growth and health of European silver fir (Abies alba). This species naturally grows in open, sunny habitats and is adapted to full sunlight or partial shade.",
     "water_description": "Watering European silver fir trees is essential for them to stay healthy. It is important to provide them with regular watering, especially during their first growing season, as they need to establish a good root system.",
-    "price_in_cents": 22.95,
+    "price_in_cents": "22.95$",
     "inventory": 12,
     "image_draw": "/images/1.png",
     "image_pic": "/resources/products/pic/1p.png"
   },
   {
     "id": 2,
-    "name": "Bird of paradise flower",
+    "name": "Bird of paradise",
     "latin_name": "Abies Alba",
     "description": "Blossoming plants are an excellent gift option because they can add beauty and fragrance to any space, and they can also have positive effects on one's mood and overall well-being. Additionally, they are relatively easy to care for and can provide lasting enjoyment.",
     "intended_for": [
@@ -38,7 +38,7 @@
     "sun": "Bright",
     "sun_description": "Sunlight is the most important environmental factor controlling the growth and health of European silver fir (Abies alba). This species naturally grows in open, sunny habitats and is adapted to full sunlight or partial shade.",
     "water_description": "Watering European silver fir trees is essential for them to stay healthy. It is important to provide them with regular watering, especially during their first growing season, as they need to establish a good root system.",
-    "price_in_cents": 22950,
+    "price_in_cents": "22.95$",
     "inventory": 12,
     "image_draw": "/images/2.png",
     "image_pic": "/resources/products/pic/1p.png"
@@ -60,7 +60,7 @@
     "sun": "Bright",
     "sun_description": "Sunlight is the most important environmental factor controlling the growth and health of European silver fir (Abies alba). This species naturally grows in open, sunny habitats and is adapted to full sunlight or partial shade.",
     "water_description": "Watering European silver fir trees is essential for them to stay healthy. It is important to provide them with regular watering, especially during their first growing season, as they need to establish a good root system.",
-    "price_in_cents": 22950,
+    "price_in_cents": "22.95$",
     "inventory": 12,
     "image_draw": "/images/3.png",
     "image_pic": "/resources/products/pic/1p.png"
@@ -82,7 +82,7 @@
     "sun": "Bright",
     "sun_description": "Sunlight is the most important environmental factor controlling the growth and health of European silver fir (Abies alba). This species naturally grows in open, sunny habitats and is adapted to full sunlight or partial shade.",
     "water_description": "Watering European silver fir trees is essential for them to stay healthy. It is important to provide them with regular watering, especially during their first growing season, as they need to establish a good root system.",
-    "price_in_cents": 22950,
+    "price_in_cents": "22.95$",
     "inventory": 12,
     "image_draw": "/images/4.png",
     "image_pic": "/resources/products/pic/1p.png"
@@ -104,7 +104,7 @@
     "sun": "Bright",
     "sun_description": "Sunlight is the most important environmental factor controlling the growth and health of European silver fir (Abies alba). This species naturally grows in open, sunny habitats and is adapted to full sunlight or partial shade.",
     "water_description": "Watering European silver fir trees is essential for them to stay healthy. It is important to provide them with regular watering, especially during their first growing season, as they need to establish a good root system.",
-    "price_in_cents": 22950,
+    "price_in_cents": "22.95$",
     "inventory": 12,
     "image_draw": "/images/5.png",
     "image_pic": "/resources/products/pic/1p.png"
@@ -126,7 +126,7 @@
     "sun": "Bright",
     "sun_description": "Sunlight is the most important environmental factor controlling the growth and health of European silver fir (Abies alba). This species naturally grows in open, sunny habitats and is adapted to full sunlight or partial shade.",
     "water_description": "Watering European silver fir trees is essential for them to stay healthy. It is important to provide them with regular watering, especially during their first growing season, as they need to establish a good root system.",
-    "price_in_cents": 22950,
+    "price_in_cents": "22.95$",
     "inventory": 12,
     "image_draw": "/images/6.png",
     "image_pic": "/resources/products/pic/1p.png"
