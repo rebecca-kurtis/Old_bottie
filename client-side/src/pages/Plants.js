@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 export default function Plants() {
   return (
     <main>
-      <h1>This all my plants</h1>
-      <Link to="/products/id">
-        A plant detailed page
-      </Link>
+      <section className="pages">
+        <h1>This all my plants</h1>
+        <Link to="/products/id">
+          A plant detailed page
+        </Link>
+      </section>
     </main>
   );
 };

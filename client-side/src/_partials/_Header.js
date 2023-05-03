@@ -11,7 +11,9 @@ import "./Header.css"
 export default function Header() {
   return(
     <header>
-      <img src={logo} alt="Bottie Logo" className="logo"/>
+      <a href="/">
+      <img src={logo} alt="Bottie Logo" className="logo" href="/"/>
+      </a>
       <nav className="nav">
           <a className="nav-link active" aria-current="page" href="/">Get Started with Bottie</a>
           <a classNam="nav-link" href="/products">All Plants</a>
