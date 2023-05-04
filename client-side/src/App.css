@@ -16,4 +16,8 @@ body {
 
 .pages h1, h2, h3 {
   font-family: "Montserrat", sans-serif;
+}
+
+.spacer-tag {
+  height: 130px;
 }/*# sourceMappingURL=App.css.map */

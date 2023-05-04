@@ -8,10 +8,10 @@ export default function Plants(props) {
   return (
     <Fragment classNames="container">
       <HeroBanner
-        message={"Find the perfect gift from our carefully selected plants collection."}
+        message={"Find the perfect gift from our curated plants collection!"}
       />
       <PageTitle
-        message={"My plants selection"}
+        message={"All Plants"}
       />
       <ProductGrid/>
       {/* <ProductCard

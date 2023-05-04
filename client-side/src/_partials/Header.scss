@@ -1,8 +1,12 @@
 @import '../App.scss';
 
 Header {
+  position: fixed;
+  background-color: transparent;
+}
+
+.nav-container {
   display: flex;
-  background-color: $lightBlue;
   padding: 25px;
   justify-content: space-between;
 }
@@ -11,15 +15,16 @@ Header {
   display: flex;
   align-items: center;
   font-family: $pageHeaderFont;
+  font-size: 20px;
   padding: 1.5em;
 }
-.nav a {
-  padding-right: 15px;
+.nav-link {
+  padding-right: 25px;
   text-decoration: none;
   color: $navTextColour;
 }
 
-.nav a:hover {
+.nav-link:hover {
   color: $lightPink;
 }
 
@@ -27,7 +32,7 @@ Header {
   padding-left: 55px;
   height: 100px;
 }
-.nav-icons {
+.user-icons {
   display: flex;
   align-items: center;
   padding: 1.5em 55px;
@@ -37,4 +42,9 @@ Header {
   padding-right: 15px;
   color: #000;
   font-size: 20px;
+}
+
+.nav-icon {
+  padding-left: 5px;
+  height: 20px;
 }

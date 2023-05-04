@@ -14,6 +14,7 @@ function App() {
   return (
     <BrowserRouter>
     <Header></Header>
+    <div className="spacer-tag"/>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/products" element={<Plants />} />

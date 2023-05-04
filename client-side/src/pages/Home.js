@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <main>
+ 
       <section className="pages">
         <h1>This is my React app!</h1>
         <Link to="/products">
