@@ -5,11 +5,10 @@ CREATE TABLE chat_gpt (
 chat_gpt_id SERIAL PRIMARY KEY NOT NULL,
 card_design_id INT,
 FOREIGN KEY(card_design_id) REFERENCES card_designs,
-Occasion VARCHAR(255),
+occasion VARCHAR(255),
 modified_date TIMESTAMP DEFAULT NOW(),
 mood VARCHAR(255),
 final_prompt TEXT,
 prose_style VARCHAR(255),
-style VARCHAR(255),
-word_length INT
+theme VARCHAR(255),
 );
