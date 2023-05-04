@@ -1,0 +1,25 @@
+$lightBeige: #F4F1DE;
+
+h2 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 58px;
+
+}
+.hero-banner {
+  display: flex;
+  justify-content: center;
+  height: 427px;
+  background: $lightBeige;
+}
+
+.text-banner {
+  display: flex;
+  justify-content: center;
+  max-width: 627px;
+  padding-top: 212px;
+  text-align: center;
+  letter-spacing: 0.15px;
+}
