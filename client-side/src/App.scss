@@ -18,6 +18,15 @@ $lightBlue: #83C5BE;
 $lightPink: #FFDDD2;
 $lightBrown: #E29578;
 
+//Header colours
+$fixedHeaderColour: transparent;
+$fixedTextHoverColour: $lightBrown;
+$scrollHeaderColour: $lightBrown;
+$scrollTextHoverColour: $lightBeige;
+
+//Header Spacer colours
+$homePageSpacer: $lightBlue;
+$plantPageSpacer: $lightBrown;
 
 body {
   background-color: $lightBeige;
