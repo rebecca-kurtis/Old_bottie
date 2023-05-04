@@ -14,7 +14,7 @@ export default function Plants(props) {
       <PageTitle
         message={"All Plants"}
       />
-      <ProductGrid/>
+      <ProductGrid />
       {/* <ProductCard
         name={"Azalea"}
         description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
