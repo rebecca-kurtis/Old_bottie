@@ -33,8 +33,14 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
-  min-height: 100vh;
+  height: 100%;
   width: 100%;
+}
+
+.container::after {
+  content: "";
+  display: block;
+  height: 100px; 
 }
 
 .pages {
