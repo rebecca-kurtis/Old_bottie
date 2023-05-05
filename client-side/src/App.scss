@@ -18,14 +18,29 @@ $lightBlue: #83C5BE;
 $lightPink: #FFDDD2;
 $lightBrown: #E29578;
 
+//Header colours
+$fixedHeaderColour: transparent;
+$fixedTextHoverColour: #fff;
+$scrollHeaderColour: $lightBrown;
+$scrollTextHoverColour: $lightBeige;
+
+//Header Spacer colours
+$homePageSpacer: $lightBlue;
+$plantPageSpacer: $lightBrown;
 
 body {
   background-color: $lightBeige;
   display: flex;
   justify-content: center;
   align-content: center;
-  min-height: 100vh;
+  height: 100%;
   width: 100%;
+}
+
+.container::after {
+  content: "";
+  display: block;
+  height: 100px; 
 }
 
 .pages {
@@ -34,4 +49,8 @@ body {
 }
 .pages h1, h2, h3{
   font-family: $pageHeaderFont;
+}
+
+.spacer-tag {
+  height: 130px;
 }

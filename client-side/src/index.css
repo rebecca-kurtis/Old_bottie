@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900");
-body,
-html {
-  margin: 0;
-  box-sizing: border-box;
+.layout {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -10,12 +7,8 @@ html {
   width: 100%;
 }
 
-.layout {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
+.main {
+  padding-bottom: 20px;
 }
 
 body {

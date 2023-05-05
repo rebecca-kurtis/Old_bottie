@@ -1,22 +1,15 @@
-
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900");
-
-body,
-html {
-  margin: 0;
-  box-sizing: border-box;
-  // font-family: $font-family;
-  
-}
 
 .layout {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   justify-content: center;
-  // align-items: center;
   width: 100%;
+}
 
+.main {
+  padding-bottom:20px;
 }
 
 body {
