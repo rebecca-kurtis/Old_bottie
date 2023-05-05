@@ -14,12 +14,6 @@ export default function Plants(props) {
         message={"My plants selection"}
       />
       <ProductGrid />
-      {/* <ProductCard
-        name={"Azalea"}
-        description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
-        price={"22.95$"}
-        imageSrc={"/images/1.png"}
-      /> */}
     </Fragment>
   );
 };
