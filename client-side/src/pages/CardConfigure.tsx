@@ -1,31 +1,40 @@
 import { React, useState } from "react";
 
 export default function CardConfigure() {
-  const [prompt, setPrompt] = useState({
-    recipientFName: '',
-    relationship: '',
-    occasion: '',
-    mood: 'happy',
-    prose_style: 'Ode',
-    theme: '',
-    from: 'Username'
-  })
+  const [recipientFName, setRecipientFName] = useState('');
+  const [relationship, setRelationship] = useState('Friend');
+  const [occasion, setOccasion] = useState('Birthday');
+  const [mood, setMood] = useState('Happy');
+  const [proseStyle, setProseStyle] = useState('Ode');
+  const [themes, setThemes] = useState([]);
+  const [from, setFrom] = useState('username');
+
+  //themechange is based on checkmarks being on or off
+  //if on they are added to a string, if off they are removed.
+  const themeChange = (event) => {
+    event.target.checked ? setThemes([...themes, event.target.value]) : setThemes(themes.filter(theme => theme !== event.target.value));
+  }
 
   return (
+
     <main>
+      <div className="spacer-tag home" />
       <section className="pages">
         <h1>This is the Card Form.</h1>
         <form>
           <label>
             Recipients First Name:
-            <input type="text" name="name" />
+            <input type="text"
+              name="name"
+              onChange={name => setRecipientFName(name.target.value)}
+            />
           </label>
           <br />
           <label>
             Their relationship to you?
-            <select>
-              <option value="partner">Partner</option>
-              <option value="wife">Wife</option>
+            <select onChange={relationship => setRelationship(relationship.target.value)} value={relationship}>
+              <option value="Partner">Partner</option>
+              <option value="Wife">Wife</option>
               <option selected value="husband">Husband</option>
               <option value="father">Father</option>
               <option value="mother">Mother</option>
@@ -36,13 +45,14 @@ export default function CardConfigure() {
               <option value="cousin">Cousin</option>
               <option value="boss">Boss</option>
               <option value="employee">Employee</option>
+              <option value="Friend">Friend</option>
             </select>
           </label>
           <br />
           <label>
             What is the occasion?
-            <select>
-              <option value="birthday">Birthday</option>
+            <select onChange={occasion => setOccasion(occasion.target.value)} value={occasion}>
+              <option value="Birthday">Birthday</option>
               <option value="anniversary">Anniversary</option>
               <option selected value="get well">Get Well</option>
               <option value="welcome home">Welcome Home</option>
@@ -71,30 +81,33 @@ export default function CardConfigure() {
           <br />
           <label>
             What Mood Are you in?
-            <select>
-              <option value="happy">Happy</option>
-              <option value="optimistic">Hopeful and Optimistic</option>
-              <option value="silly">Silly or Funny</option>
-              <option value="sympathy">Symathetic</option>
-              <option value="romantic">Romantic</option>
-              <option value="excited">Excited</option>
-              <option value="fearful">Unsure and Fearful</option>
+            <select onChange={mood => setMood(mood.target.value)} >
+              <option value="Happy">Happy</option>
+              <option value="Optimistic">Hopeful and Optimistic</option>
+              <option value="Silly">Silly or Funny</option>
+              <option value="Sympathy">Symathetic</option>
+              <option value="Romantic">Romantic</option>
+              <option value="Excited">Excited</option>
+              <option value="Fearful">Unsure and Fearful</option>
             </select>
           </label>
           <br />
-          <p>What themes would you like to talk about?</p>
+          <p>What themes would you like to talk about?(I need to put this in a loop)</p>
           <label>
             Love
-            <input
-              type="radio"
+            <input onChange={themeChange}
+              type="checkbox"
               name="love"
+              value="love"
+
             />
           </label>
           <label>
             Romance
-            <input
-              type="radio"
-              name="love"
+            <input onChange={themeChange}
+              type="checkbox"
+              name="romance"
+              value="romance"
             />
           </label>
           <label>
@@ -373,21 +386,42 @@ export default function CardConfigure() {
           <br />
           <label>
             What Style of Poem? (We should have helpers here.)
-            <select>
+            <select onChange={proseStyle => setProseStyle(proseStyle.target.value)} value={proseStyle}>
               <option value="free verse">Free Verse</option>
               <option value="perfect rhyme">Perfect Rhyme</option>
               <option value="haiku">Haiku</option>
               <option value="sonnet">Sonnet</option>
               <option value="limerick">Limerick</option>
               <option value="villanelle">Villanelle</option>
+              <option value="Ode">Ode</option>
             </select>
           </label>
-
-
           <br />
-
+          <label>
+            Would you like it to be from a different name:
+            <input type="text"
+              name="from"
+              onChange={from => setFrom(from.target.value)}
+              value={from}
+            />
+          </label>
+          <br />
           <input type="submit" value="Submit" />
         </form>
+
+        <div>
+          {recipientFName} <br />
+          {relationship}<br />
+          {occasion}<br />
+          {mood}<br />
+          {themes.map((theme, index) => (
+            index + 1 === themes.length ? `${theme}` : `${theme}, `
+          ))}
+          <br />
+          {proseStyle}<br />
+          {from}<br />
+        </div>
+
       </section>
     </main>
   );
