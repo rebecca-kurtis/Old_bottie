@@ -11,7 +11,6 @@ export default function CardConfigure() {
 
   //themechange is based on checkmarks being on or off
   //if on they are added to a string, if off they are removed.
-  //since we add commas for the prompt it also removes any commas that aren't necessary.
   const themeChange = (event) => {
     event.target.checked ? setThemes([...themes, event.target.value]) : setThemes(themes.filter(theme => theme !== event.target.value));
   }
@@ -19,6 +18,7 @@ export default function CardConfigure() {
   return (
 
     <main>
+      <div className="spacer-tag home" />
       <section className="pages">
         <h1>This is the Card Form.</h1>
         <form>
