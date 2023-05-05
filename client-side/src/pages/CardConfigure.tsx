@@ -13,6 +13,7 @@ export default function CardConfigure() {
 
   return (
     <main>
+      <div className="spacer-tag" />
       <section className="pages">
         <h1>This is the Card Form.</h1>
         <form>

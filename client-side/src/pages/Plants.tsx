@@ -6,7 +6,7 @@ import './Plants.css';
 
 export default function Plants(props) {
   return (
-    <Fragment classNames="container">
+    <Fragment >
       <div className="spacer-tag plants"/>
       <HeroBanner
         message={"Find the perfect gift from our curated plants collection!"}
