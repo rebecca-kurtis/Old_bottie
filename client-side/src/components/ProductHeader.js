@@ -9,7 +9,6 @@ export default function ProductHeader() {
       <div className="product_header">
         <PlantHeadingVisuals></PlantHeadingVisuals>   
         <PlantHeadingInfo></PlantHeadingInfo>
-           
       </div>
     </Fragment>
   );

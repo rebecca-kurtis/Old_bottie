@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import './ProductCard.css';
-// import datas from './data/products.json';
+
 
 export default function ProductCard(props) {
 

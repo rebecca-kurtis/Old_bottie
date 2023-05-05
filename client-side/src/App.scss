@@ -12,21 +12,36 @@ $cardHeaderFont: 'Bellefair', serif;
 $cardParagraphFont: 'Courgette', cursive;
 
 //Brand colours
-$white: #ffffff;
 $lightBeige: #F4F1DE;
 $darkBlue: #006D77;
 $lightBlue: #83C5BE;
 $lightPink: #FFDDD2;
 $lightBrown: #E29578;
+$white: #ffffff;
 
+//Header colours
+$fixedHeaderColour: transparent;
+$fixedTextHoverColour: #fff;
+$scrollHeaderColour: $lightBrown;
+$scrollTextHoverColour: $lightBeige;
+
+//Header Spacer colours
+$homePageSpacer: $lightBlue;
+$plantPageSpacer: $lightBrown;
 
 body {
   background-color: $white;
   display: flex;
   justify-content: center;
   align-content: center;
-  min-height: 100vh;
+  height: 100%;
   width: 100%;
+}
+
+.container::after {
+  content: "";
+  display: block;
+  height: 100px; 
 }
 
 .pages {
@@ -113,6 +128,10 @@ li {
   background-color: #D56D46;
   box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
   transform: translateY(0);
+}
+
+.spacer-tag {
+  height: 130px;
 }
 
 
