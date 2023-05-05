@@ -1,29 +1,52 @@
 import { React, useState } from "react";
 
 export default function CardConfigure() {
-  const [prompt, setPrompt] = useState({
-    recipientFName: '',
-    relationship: '',
-    occasion: '',
-    mood: 'happy',
-    prose_style: 'Ode',
-    theme: '',
-    from: 'Username'
-  })
+  const [recipientFName, setRecipientFName] = useState('');
+  const [relationship, setRelationship] = useState('');
+  const [occasion, setOccasion] = useState('');
+  const [mood, setMood] = useState('');
+  const [proseStyle, setProseStyle] = useState('');
+  const [theme, setTheme] = useState('');
+  const [from, setFrom] = useState('username');
+
+  //removeTextFromState takes in a state and a string you want removed.
+  const removeTextFromState = (state, str) => {
+    const newState = state.replace(str, '');
+    return newState;
+  }
+
+  //removeCommaFromFront Takes in a string and removes the comma and first empty space if comma exists
+  const removeCommaFromFront = (str) => {
+    if (str[0] === ",") {
+      str = str.substring(2);
+    }
+    return str;
+  }
+
+  //themechange is based on checkmarks being on or off
+  //if on they are added to a string, if off they are removed.
+  //since we add commas for the prompt it also removes any commas that aren't necessary.
+  const themeChange = (event) => {
+    event.target.checked ? theme ? setTheme(theme + ", " + event.target.value) : setTheme(theme + event.target.value) : setTheme(removeCommaFromFront(removeTextFromState(theme, event.target.value)));
+  }
 
   return (
+
     <main>
       <section className="pages">
         <h1>This is the Card Form.</h1>
         <form>
           <label>
             Recipients First Name:
-            <input type="text" name="name" />
+            <input type="text"
+              name="name"
+              onChange={name => setRecipientFName(name.target.value)}
+            />
           </label>
           <br />
           <label>
             Their relationship to you?
-            <select>
+            <select onChange={relationship => setRelationship(relationship.target.value)} >
               <option value="partner">Partner</option>
               <option value="wife">Wife</option>
               <option selected value="husband">Husband</option>
@@ -41,7 +64,7 @@ export default function CardConfigure() {
           <br />
           <label>
             What is the occasion?
-            <select>
+            <select onChange={occasion => setOccasion(occasion.target.value)}>
               <option value="birthday">Birthday</option>
               <option value="anniversary">Anniversary</option>
               <option selected value="get well">Get Well</option>
@@ -71,7 +94,7 @@ export default function CardConfigure() {
           <br />
           <label>
             What Mood Are you in?
-            <select>
+            <select onChange={mood => setMood(mood.target.value)} >
               <option value="happy">Happy</option>
               <option value="optimistic">Hopeful and Optimistic</option>
               <option value="silly">Silly or Funny</option>
@@ -82,19 +105,22 @@ export default function CardConfigure() {
             </select>
           </label>
           <br />
-          <p>What themes would you like to talk about?</p>
+          <p>What themes would you like to talk about?(I need to put this in a loop)</p>
           <label>
             Love
-            <input
-              type="radio"
+            <input onChange={themeChange}
+              type="checkbox"
               name="love"
+              value="love"
+
             />
           </label>
           <label>
             Romance
-            <input
-              type="radio"
-              name="love"
+            <input onChange={themeChange}
+              type="checkbox"
+              name="romance"
+              value="romance"
             />
           </label>
           <label>
@@ -382,12 +408,27 @@ export default function CardConfigure() {
               <option value="villanelle">Villanelle</option>
             </select>
           </label>
-
-
           <br />
-
+          <label>
+            Would you like it to be from a different name:
+            <input type="text"
+              name="from"
+              onChange={from => setFrom(from.target.value)}
+            />
+          </label>
+          <br />
           <input type="submit" value="Submit" />
         </form>
+
+        <div>
+          {recipientFName} <br />
+          {relationship}<br />
+          {occasion}<br />
+          {mood}<br />
+          {theme}<br />
+          {from}<br />
+        </div>
+
       </section>
     </main>
   );
