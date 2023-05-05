@@ -6,28 +6,14 @@ export default function CardConfigure() {
   const [occasion, setOccasion] = useState('');
   const [mood, setMood] = useState('');
   const [proseStyle, setProseStyle] = useState('');
-  const [theme, setTheme] = useState('');
+  const [themes, setThemes] = useState([]);
   const [from, setFrom] = useState('username');
-
-  //removeTextFromState takes in a state and a string you want removed.
-  const removeTextFromState = (state, str) => {
-    const newState = state.replace(str, '');
-    return newState;
-  }
-
-  //removeCommaFromFront Takes in a string and removes the comma and first empty space if comma exists
-  const removeCommaFromFront = (str) => {
-    if (str[0] === ",") {
-      str = str.substring(2);
-    }
-    return str;
-  }
 
   //themechange is based on checkmarks being on or off
   //if on they are added to a string, if off they are removed.
   //since we add commas for the prompt it also removes any commas that aren't necessary.
   const themeChange = (event) => {
-    event.target.checked ? theme ? setTheme(theme + ", " + event.target.value) : setTheme(theme + event.target.value) : setTheme(removeCommaFromFront(removeTextFromState(theme, event.target.value)));
+    event.target.checked ? setThemes([...themes, event.target.value]) : setThemes(themes.filter(theme => theme !== event.target.value));
   }
 
   return (
@@ -425,7 +411,10 @@ export default function CardConfigure() {
           {relationship}<br />
           {occasion}<br />
           {mood}<br />
-          {theme}<br />
+          {themes.map((theme, index) => (
+            index + 1 === themes.length ? `${theme}` : `${theme}, `
+          ))}
+          <br />
           {from}<br />
         </div>
 
