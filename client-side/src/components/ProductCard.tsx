@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import './ProductCard.css';
 
+
 export default function ProductCard(props) {
 
   let navigate = useNavigate(); 
@@ -21,7 +22,7 @@ export default function ProductCard(props) {
         alt="Products">    
       </img>
       <div className="card__info">
-        <h4 className="card__name">{props.name}</h4>
+        <h4>{props.name}</h4>
         <p className="card__description">
           {props.description.length > 65?
             `${props.description.substring(0, 65)}...` : props.description

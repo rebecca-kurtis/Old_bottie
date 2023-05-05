@@ -1,38 +1,21 @@
 @import '../App.scss';
 
-li{
-  list-style-type: none;
-  cursor: pointer;
-}
-
 .card {
   display: flex;
   flex-direction: row;
   width: 345px;
-  height: 191px;
+  height: 200px;
   margin-bottom: 50px;
   margin-top: 50px;
   margin-right: 45px;
   margin-left: 20px;
   padding-right: 20px;
   background: #FFFFFF;
-  box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.25);
   border-radius: 9px;
-}
-
-.card__info {
-  display: flex;
-  flex-direction: column;
-}
-
-.card__name {
-  display: flex;
-  font-family: $pageHeaderFont;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  letter-spacing: 0.15px;
-  color: rgba(0, 0, 0, 0.87);
+  list-style-type: none;
+  cursor: pointer;
+  list-style-type: none;
 }
 
 .card__description {
@@ -45,17 +28,23 @@ li{
   margin-top: -15px;
   letter-spacing: 0.25px;
   color: rgba(20, 19, 19, 0.6);
+  margin-top: -15px;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
 }
 
 .card__price {
   display: flex;
   font-family: $pageParagraphFont;
   font-style: normal;
-  font-weight: 500;
   font-size: 18px;
-  margin-top: -8px;
   letter-spacing: 0.15px;
   color: rgba(0, 0, 0, 0.87);
+  font-weight: 600;
+  margin-top: -8px;
 }
 
 .card__image {

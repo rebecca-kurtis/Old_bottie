@@ -4,9 +4,11 @@ import PageTitle from "../components/PageTitle";
 import ProductGrid from "../components/ProductsGrid";
 import './Plants.css';
 
+
+
 export default function Plants(props) {
   return (
-    <Fragment classNames="container">
+    <Fragment>
       <div className="spacer-tag plants"/>
       <HeroBanner
         message={"Find the perfect gift from our curated plants collection!"}
@@ -15,12 +17,6 @@ export default function Plants(props) {
         message={"All Plants"}
       />
       <ProductGrid />
-      {/* <ProductCard
-        name={"Azalea"}
-        description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
-        price={"22.95$"}
-        imageSrc={"/images/1.png"}
-      /> */}
     </Fragment>
   );
 };

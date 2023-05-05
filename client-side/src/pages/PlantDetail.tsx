@@ -1,10 +1,15 @@
-import React from "react";
+import React, { Fragment } from "react";
+import ProductHeader from "../components/ProductHeader";
+import ProductBody from "../components/ProductBody";
+
 
 export default function PlantDetail() {
   return (
-    <main>
-      <h1>This a plant detailed page</h1>
-    </main>
+    <Fragment>
+      <div className="spacer-tag"></div>
+      <ProductHeader />
+      <ProductBody />
+    </Fragment>
   );
 };
 
