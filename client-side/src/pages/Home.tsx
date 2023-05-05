@@ -1,9 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+//import styling
+import "./Home.css"
+
 export default function Home() {
   return (
     <main>
+     <div className="spacer-tag home"/>
       <section className="pages">
         <h1>This is my React app!</h1>
         <Link to="/products">

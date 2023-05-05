@@ -1,23 +1,25 @@
+@import '../App.scss';
+
 h2 {
-  font-family: 'Roboto';
+  font-family: $pageHeaderFont;
   font-style: normal;
   font-weight: 400;
-  font-size: 38px;
+  font-size: 35px;
   line-height: 58px;
-
 }
+
 .hero-banner {
   display: flex;
   justify-content: center;
   height: 427px;
-  background: #FFF4E8;
+  background: $lightBrown;
 }
 
 .text-banner {
   display: flex;
   justify-content: center;
-  max-width: 627px;
-  padding-top: 212px;
+  max-width: 60%;
+  padding-top: 150px;
   text-align: center;
   letter-spacing: 0.15px;
 }
