@@ -2,7 +2,9 @@ import { React, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //import styling
-import "./App.css"
+import "./App.css";
+// import 'bootstrap';
+
 
 //import components
 import Header from "./_partials/_Header";

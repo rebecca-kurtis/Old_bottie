@@ -1,5 +1,5 @@
 import React from "react";
-import _Login from "./_Login.tsx"
+import _Login from "./_Login"
 //Import photos
 import logo from "../images/layout/BottieLogo.png";
 import commentIcon from "./comment_icon.png";
@@ -46,12 +46,11 @@ export default function Header() {
           <div className="user-icons">
             <FontAwesomeIcon 
               className="icon" 
-              icon={faUser} 
-              type="button" 
+              icon={faUser} ></FontAwesomeIcon>
+              {/* type="button" 
               data-bs-toggle="offcanvas" 
               data-bs-target="#offcanvasWithBothOptions" 
-              aria-controls="offcanvasWithBothOptions"></FontAwesomeIcon>
-            
+              aria-controls="offcanvasWithBothOptions" */}
             <FontAwesomeIcon className="icon" icon={faCartShopping} />
           </div>
         </div>
