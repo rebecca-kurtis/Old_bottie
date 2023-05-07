@@ -18,7 +18,8 @@ const generatePrompt = function (prompt) {
     }
   }).then(function (response) {
     const message = response.data.choices[0].message.content
+    console.log(response.data.choices[0].message.content);
     return message;
   });
 }
-module.exports = (generatePrompt);
+module.exports = { generatePrompt };

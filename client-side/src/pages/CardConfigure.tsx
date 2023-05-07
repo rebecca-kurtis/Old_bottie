@@ -1,8 +1,10 @@
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
 import PageTitle from "../components/PageTitle";
 import FormTextBox from "../components/cardConfigure/FormTextbox";
 import FormSelection from "../components/cardConfigure/FormSelection";
 import FormCheckBoxes from "../components/cardConfigure/FormCheckboxes";
+import axios from "axios";
+
 
 export default function CardConfigure() {
   const [recipientFName, setRecipientFName] = useState('');
@@ -12,6 +14,7 @@ export default function CardConfigure() {
   const [proseStyle, setProseStyle] = useState('Ode');
   const [themes, setThemes] = useState([] as string[]);
   const [from, setFrom] = useState('username');
+  const [message, setMessage]= useState("");
 
   const relationshipOptions = ["Partner", "Wife", "Husband", "Father", "Mother", "Brother", "Sister", "Uncle", "Aunt", "Cousin", "Grandmother", "Grandfather", "Boss", "Employee", "Friend"];
   const occasionOptions = ["Birthday", "Anniversary", "Get Well", "Sorry For Your Loss", "Welcome Home", "Mothes Day", "Fathers Day", "New Baby", "Condolences", "Congrats", "Farewell", "Graduation", "Just Because", "Wedding", "Thank-you", "Welcome", "Valentines Day", "Christmas", "Happy Holidays", "New Year", "Easter", "Thanksgiving", "St. Patricks Day", "I'm Sorry" ];
@@ -25,14 +28,43 @@ export default function CardConfigure() {
     event.target.checked ? setThemes([...themes, event.target.value]) : setThemes(themes.filter(theme => theme !== event.target.value));
   }
 
+  const route = process.env.REACT_APP_SERVER + ":" + process.env.REACT_APP_SERVER_PORT + "/chatGPT"
+
+  const handleGPTSubmit = (event) => {
+    event.preventDefault();
+    const prompt = {
+      relationship, 
+      proseStyle, 
+      occasion, 
+      themes, 
+      mood
+    }
+
+    axios
+    .post(route, prompt)
+    .then(()=> console.log('Request Sent: ', prompt))
+    .catch((err) => {
+      console.log(err);
+    })
+
+  }
+
+  useEffect(() => {
+    fetch(route)
+    .then((res) => res.json())
+    .then((data) => setMessage(data.message));
+  }, []);
+
   return (
     <main>
+     
       <div className="spacer-tag home" />
       <section className="pages">
       <PageTitle
         message={"Let Aunt Bottie Create a Custom Message for You."}
       />
-        <form>
+      <p> {route}</p>
+        <form onSubmit={handleGPTSubmit}>
             <FormTextBox
             labelText="Who is the Gift for?"
             name="recipientsFName"
@@ -85,13 +117,13 @@ export default function CardConfigure() {
             value={from}
             onChange={from => setFrom(from.target.value)}
             />
-
-          <input type="submit" value="Submit" />
-        
+          <div>
+          <p><input type="submit" value="Generate Message" /></p>
+          </div>
         </form>
         {
         /* the following is for verifying we have control of states.
-        Should be removed later
+        Should be removed later.
         <div>
           {recipientFName} <br />
           {relationship}<br />
@@ -106,6 +138,9 @@ export default function CardConfigure() {
         </div>
           */
           }
+          <div>
+            <p>{message}</p>
+          </div>
 
       </section>
     </main>
